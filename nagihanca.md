@@ -3,7 +3,7 @@ layout: default
 title: Nagihanca
 ---
 
-<h2>Nagihanca Yazılar</h2>
+<h2>Nagihan'ca</h2>
 
 <ul>
 {% for item in site.nagihanca %}
