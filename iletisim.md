@@ -3,10 +3,10 @@ layout: page
 title: İletişim
 ---
 
-Genel sorular için
+*Genel sorular için*
 
-info@nagihansaka.com  
+**info@nagihansaka.com**
 
-İşbirliği için 
+*İşbirliği için*
 
-contact@nagihansaka.com
+**contact@nagihansaka.com**
