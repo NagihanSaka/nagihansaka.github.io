@@ -27,6 +27,35 @@ body{
     justify-content:space-between;
     padding:15px 10px;
 }
+@media (max-width:700px){
+
+.topbar{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.site-title{
+font-size:28px;
+margin-bottom:10px;
+white-space:nowrap;
+}
+
+.menu{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+.menu a{
+margin:0;
+font-size:15px;
+}
+
+.hero{
+margin-top:120px;
+}
 
 .site-title{
     font-size:28px;
