@@ -3,6 +3,7 @@ description:
 theme: minima
 footer:
   show_powered_by: false
+favicon: /favicon.ico
 
 header_pages:
   - nagihanca.md
