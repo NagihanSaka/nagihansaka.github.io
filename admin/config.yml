@@ -12,8 +12,12 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
     fields:
       - { label: "Başlık", name: "title", widget: "string" }
+
       - { label: "Kategori", name: "category", widget: "select", options: ["Nagihan'ca", "Strateji", "Sistem Dinamikleri"] }
+
       - { label: "Tarih", name: "date", widget: "datetime" }
-      - { label: "İçerik", name: "body", widget: "markdown" }
+
+      - { label: "Yazı", name: "body", widget: "markdown" }
