@@ -1,15 +1,17 @@
 <style>
 body {
   margin: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.hero {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('/assets/hero.png');
-  background-size: cover;
-  background-position: center;
+img {
+  max-width: 90%;
+  max-height: 90vh;
 }
 </style>
 
-<div class="hero"></div>
+<img src="/assets/hero.png">
