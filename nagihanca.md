@@ -1,14 +1,10 @@
 ---
 layout: default
-title: Nagihanca
+title: Nagihan'ca
 ---
 
-<h2>Nagihan'ca</h2>
+# Nagihanca
 
-<ul>
 {% for item in site.nagihanca %}
-  <li>
-    <a href="{{ item.url }}">{{ item.title }}</a>
-  </li>
+- [{{ item.title }}]({{ item.url }})
 {% endfor %}
-</ul>
