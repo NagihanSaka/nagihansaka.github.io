@@ -1,0 +1,14 @@
+---
+layout: default
+title: Strateji
+---
+
+<h2>Strateji Yazıları</h2>
+
+<ul>
+{% for item in site.strateji %}
+  <li>
+    <a href="{{ item.url }}">{{ item.title }}</a>
+  </li>
+{% endfor %}
+</ul>
