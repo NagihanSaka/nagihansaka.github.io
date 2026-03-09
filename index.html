@@ -1,15 +1,14 @@
 <head>
 <meta name="google-site-verification" content="pYisyO6z6NTlvNKQFOKIA5Fw5zEJMvWjEjGyKG3YL1I" />
 <meta name="description" content="Nagihan’ca; sistem dinamikleri, strateji, finansal modelleme ve ilhamın götürdüğü konular üzerine notlar: kişisel bir yolculuk.">
-</head>
 
 <style>
 
-
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:white;
+    font-family: Georgia, "Book Antiqua", serif;
+    background:#f6f5f2;
+    color:#1f1f1f;
 }
 
 /* HEADER */
@@ -19,8 +18,8 @@ body{
     top:0;
     left:0;
     width:100%;
-    background:white;
-    border-bottom:1px solid #ddd;
+    background:#fbfbfa;
+    border-bottom:1px solid #e6e6e6;
     z-index:1000;
 }
 
@@ -39,8 +38,9 @@ body{
 }
 
 .site-title{
-    font-size:28px;
-    font-weight:600;
+    font-size:34px;
+    font-weight:500;
+    letter-spacing:0.5px;
 }
 
 /* MENU */
@@ -57,7 +57,7 @@ body{
     position:relative;
 }
 
-/* PREMIUM HOVER ÇİZGİ EFEKTİ */
+/* HOVER ÇİZGİ */
 
 .menu a::after{
     content:"";
@@ -66,7 +66,7 @@ body{
     bottom:-4px;
     width:0%;
     height:2px;
-    background:#0a66c2;
+    background:#3f6f52;
     transition:0.3s;
 }
 
@@ -74,16 +74,27 @@ body{
     width:100%;
 }
 
-/* HERO */
+/* ANA SAYFA GİRİŞ */
 
-.hero{
-    margin-top:100px;
+.intro{
+    margin-top:180px;
+    text-align:center;
+    padding:20px;
 }
 
-.hero img{
-    width:100%;
-    border-radius:6px;
-    box-shadow:0 25px 45px rgba(0,0,0,0.35);
+.circle{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#d9e2d4;
+    margin:40px auto;
+}
+
+.intro-text{
+    font-size:20px;
+    line-height:1.6;
+    max-width:650px;
+    margin:auto;
 }
 
 /* MOBİL */
@@ -110,13 +121,20 @@ body{
     font-size:15px;
 }
 
-.hero{
-    margin-top:120px;
+.intro{
+    margin-top:200px;
+}
+
+.intro-text{
+    font-size:18px;
 }
 
 }
 
 </style>
+</head>
+
+<body>
 
 <div class="header">
 <div class="container">
@@ -124,11 +142,11 @@ body{
 <div class="topbar">
 
 <div class="site-title">
-Nagihan Saka
+<a href="/" style="text-decoration:none;color:inherit;">Nagihan Saka</a>
 </div>
 
 <div class="menu">
-<a href="/">Nagihan'ca</a>
+<a href="/nagihanca">Nagihan'ca</a>
 <a href="/strateji">Strateji</a>
 <a href="/sistem-dinamikleri">Sistem Dinamikleri</a>
 <a href="/iletisim">İletişim</a>
@@ -138,8 +156,16 @@ Nagihan Saka
 </div>
 </div>
 
-<div class="container hero">
+<div class="container intro">
 
-<img src="/assets/hero.png">
+<div class="circle"></div>
+
+<div class="intro-text">
+Nagihan’ca kişisel bir yolculuk:<br>
+sistem dinamikleri, strateji,<br>
+finansal modelleme ve ilhamın götürdüğü düşünceler üzerine notlar.
+</div>
 
 </div>
+
+</body>
