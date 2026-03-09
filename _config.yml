@@ -1,5 +1,5 @@
 title: Nagihan Saka
-description: 
+description:
 theme: minima
 footer:
   show_powered_by: false
@@ -13,4 +13,8 @@ header_pages:
 
 collections:
   nagihanca:
+    output: true
+  strateji:
+    output: true
+  sistem-dinamikleri:
     output: true
