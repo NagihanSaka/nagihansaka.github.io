@@ -3,7 +3,7 @@ layout: page
 title: İletişim
 ---
 
-*Genel sorular için*
+*Bilgi için*
 
 **info@nagihansaka.com**
 
