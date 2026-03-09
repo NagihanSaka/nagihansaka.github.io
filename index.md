@@ -6,6 +6,8 @@ body{
     background:white;
 }
 
+/* HEADER */
+
 .header{
     position:fixed;
     top:0;
@@ -21,40 +23,13 @@ body{
     margin:auto;
 }
 
+/* ÜST BAR */
+
 .topbar{
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:15px 10px;
-}
-@media (max-width:700px){
-
-.topbar{
-flex-direction:column;
-align-items:center;
-text-align:center;
-}
-
-.site-title{
-font-size:28px;
-margin-bottom:10px;
-white-space:nowrap;
-}
-
-.menu{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-}
-
-.menu a{
-margin:0;
-font-size:15px;
-}
-
-.hero{
-margin-top:120px;
 }
 
 .site-title{
@@ -62,15 +37,38 @@ margin-top:120px;
     font-weight:600;
 }
 
-.menu a{
-    margin-left:20px;
-    text-decoration:none;
-    color:#333;
+/* MENU */
+
+.menu{
+    display:flex;
+    gap:28px;
 }
 
-.menu a:hover{
-    color:#0077cc;
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-size:16px;
+    position:relative;
 }
+
+/* PREMIUM HOVER ÇİZGİ EFEKTİ */
+
+.menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0%;
+    height:2px;
+    background:#0a66c2;
+    transition:0.3s;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+/* HERO */
 
 .hero{
     margin-top:100px;
@@ -80,6 +78,36 @@ margin-top:120px;
     width:100%;
     border-radius:6px;
     box-shadow:0 25px 45px rgba(0,0,0,0.35);
+}
+
+/* MOBİL */
+
+@media (max-width:700px){
+
+.topbar{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.site-title{
+    margin-bottom:10px;
+}
+
+.menu{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.menu a{
+    font-size:15px;
+}
+
+.hero{
+    margin-top:120px;
+}
+
 }
 
 </style>
