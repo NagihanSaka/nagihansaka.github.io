@@ -76,6 +76,6 @@ Nagihan Saka
 
 <div class="container hero">
 
-<img src="/assets/images/hero.png">
+<img src="/assets/hero.png">
 
 </div>
