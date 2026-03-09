@@ -2,6 +2,7 @@ backend:
   name: github
   repo: NagihanSaka/nagihansaka.github.io
   branch: main
+  base_url: https://api.netlify.com
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -14,10 +15,12 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
-      - { label: "Başlık", name: "title", widget: "string" }
+      - {label: "Başlık", name: "title", widget: "string"}
 
-      - { label: "Kategori", name: "category", widget: "select", options: ["Nagihan'ca", "Strateji", "Sistem Dinamikleri"] }
+      - {label: "Kategori", name: "category", widget: "select", options: ["Nagihan'ca","Strateji","Sistem Dinamikleri"]}
 
-      - { label: "Tarih", name: "date", widget: "datetime" }
+      - {label: "Tarih", name: "date", widget: "datetime"}
 
-      - { label: "Yazı", name: "body", widget: "markdown" }
+      - {label: "Kapak Görseli", name: "image", widget: "image", required: false}
+
+      - {label: "Yazı", name: "body", widget: "markdown"}
