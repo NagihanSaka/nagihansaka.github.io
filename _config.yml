@@ -1,0 +1,13 @@
+title: Nagihan Saka
+description: Düşünce Arşivi
+theme: minima
+
+header_pages:
+  - nagihanca.md
+  - strateji.md
+  - sistem-dinamikleri.md
+  - iletisim.md
+
+collections:
+  nagihanca:
+    output: true
