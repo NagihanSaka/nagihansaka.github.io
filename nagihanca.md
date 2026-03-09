@@ -5,6 +5,6 @@ title: Nagihan'ca
 
 # Nagihan'ca
 
-{% for item in site.nagihan'ca %}
+{% for item in site.nagihanca %}
 - [{{ item.title }}]({{ item.url }})
 {% endfor %}
