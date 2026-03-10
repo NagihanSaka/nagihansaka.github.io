@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Denemeler</title>
+<title>Tweetler</title>
 
 <style>
 
@@ -21,10 +21,11 @@ left:0;
 width:100%;
 background:#fbfbfa;
 border-bottom:1px solid #e6e6e6;
+z-index:1000;
 }
 
 .container{
-max-width:900px;
+max-width:1200px;
 margin:auto;
 padding:0 20px;
 }
@@ -50,23 +51,56 @@ text-decoration:none;
 color:#333;
 }
 
-.content{
+/* SAYFA */
+
+.page{
 margin-top:160px;
+max-width:1200px;
+margin-left:auto;
+margin-right:auto;
+display:grid;
+grid-template-columns:300px 1fr;
+gap:40px;
+padding:20px;
 }
 
-.post{
-margin-bottom:40px;
+/* SOL KUTU */
+
+.post-list{
+background:white;
+padding:20px;
+border:1px solid #e6e6e6;
 }
 
-.post a{
-font-size:24px;
+.post-item{
+cursor:pointer;
+margin-bottom:15px;
+font-size:18px;
+}
+
+.post-item:hover{
+color:#3f6f52;
+}
+
+/* SAĞ ÖZET */
+
+.summary{
+background:white;
+padding:30px;
+border:1px solid #e6e6e6;
+min-height:300px;
+}
+
+.summary h3{
+margin-top:0;
+}
+
+.read{
+display:inline-block;
+margin-top:20px;
+border-bottom:1px solid black;
 text-decoration:none;
-color:#1f1f1f;
-}
-
-.post p{
-margin-top:6px;
-color:#666;
+color:black;
 }
 
 </style>
@@ -94,16 +128,51 @@ color:#666;
 </div>
 </div>
 
-<div class="container content">
 
-<h1>Tweetler</h1>
+<div class="page">
 
-<div class="post">
-<a href="#">İlk tweet yazısı</a>
-<p>Kısa açıklama burada olacak.</p>
+<div class="post-list">
+
+<div class="post-item"
+onclick="showPost(
+'İlk tweet',
+'Kısa bir düşünce notu.',
+'/pdf/ilk-tweet.pdf'
+)">İlk tweet</div>
+
+<div class="post-item"
+onclick="showPost(
+'İkinci tweet',
+'Başka bir kısa fikir.',
+'/pdf/ikinci-tweet.pdf'
+)">İkinci tweet</div>
+
+</div>
+
+
+<div class="summary" id="summaryBox">
+
+<h3>Bir tweet seç</h3>
+<p>Soldaki listeden bir başlığa tıklayın.</p>
+
 </div>
 
 </div>
+
+
+<script>
+
+function showPost(title, summary, link){
+
+document.getElementById("summaryBox").innerHTML = `
+<h3>${title}</h3>
+<p>${summary}</p>
+<a class="read" href="${link}" target="_blank">Devamı (PDF)</a>
+`;
+
+}
+
+</script>
 
 </body>
 </html>
