@@ -17,34 +17,45 @@ color:#1f1f1f;
 text-rendering:optimizeLegibility;
 }
 
+/* HEADER */
+
 .header{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-background:white;
-border-bottom:1px solid #ddd;
+background:#fbfbfa;
+border-bottom:1px solid #e6e6e6;
+z-index:1000;
 }
 
 .container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
+padding:0 20px;
 }
 
 .topbar{
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:25px 10px;
+justify-content:space-between;
+padding:20px 10px;
 }
 
 .site-title{
-font-size:30px;
+font-size:34px;
 font-weight:500;
+letter-spacing:0.5px;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+gap:28px;
 }
 
 .menu a{
-margin-left:30px;
 text-decoration:none;
 color:#333;
 font-size:16px;
@@ -56,24 +67,66 @@ color:#888;
 font-weight:600;
 }
 
+/* HOVER ÇİZGİ */
+
+.menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-4px;
+width:0%;
+height:2px;
+background:#3f6f52;
+transition:0.3s;
+}
+
+.menu a:hover::after{
+width:100%;
+}
+
+/* CONTENT */
+
 .content{
-margin-top:140px;
-padding:20px;
+margin-top:160px;
+text-align:center;
 }
 
-h1{
-font-size:34px;
-margin-bottom:30px;
+.content h1{
+font-size:36px;
+margin-bottom:60px;
 }
 
-h2{
-font-size:24px;
-margin-top:40px;
+/* CATEGORY */
+
+.category-container{
+display:flex;
+justify-content:center;
+gap:80px;
+flex-wrap:wrap;
 }
 
-p{
+.category{
+max-width:320px;
+}
+
+.category a{
+text-decoration:none;
+color:inherit;
+}
+
+.category h2{
+font-size:26px;
+margin-bottom:12px;
+}
+
+.category p{
 font-size:18px;
-margin-top:10px;
+color:#555;
+line-height:1.6;
+}
+
+.category:hover h2{
+color:#3f6f52;
 }
 
 </style>
@@ -84,6 +137,7 @@ margin-top:10px;
 
 <div class="header">
 <div class="container">
+
 <div class="topbar">
 
 <div class="site-title">
@@ -101,15 +155,27 @@ margin-top:10px;
 </div>
 
 
-<div class="content">
+<div class="container content">
 
 <h1>Düşünceler</h1>
 
+<div class="category-container">
+
+<div class="category">
+<a href="/denemeler.html">
 <h2>Denemeler</h2>
 <p>Uzun düşünce yazıları.</p>
+</a>
+</div>
 
+<div class="category">
+<a href="/tweetler.html">
 <h2>Tweetler</h2>
 <p>Kısa notlar ve fikir parçaları.</p>
+</a>
+</div>
+
+</div>
 
 </div>
 
