@@ -14,6 +14,8 @@ background:#f6f5f2;
 color:#1f1f1f;
 }
 
+/* HEADER */
+
 .header{
 position:fixed;
 top:0;
@@ -59,30 +61,44 @@ max-width:1200px;
 margin-left:auto;
 margin-right:auto;
 display:grid;
-grid-template-columns:300px 1fr;
+grid-template-columns:320px 1fr;
 gap:40px;
 padding:20px;
 }
 
-/* SOL KUTU */
+/* SOL PANEL */
 
 .post-list{
 background:white;
 padding:20px;
 border:1px solid #e6e6e6;
+height:420px;
+overflow-y:auto;
 }
+
+/* SCROLLBAR */
+
+.post-list::-webkit-scrollbar{
+width:6px;
+}
+
+.post-list::-webkit-scrollbar-thumb{
+background:#ccc;
+}
+
+/* YAZI */
 
 .post-item{
 cursor:pointer;
-margin-bottom:15px;
-font-size:18px;
+margin-bottom:12px;
+font-size:17px;
 }
 
 .post-item:hover{
 color:#3f6f52;
 }
 
-/* SAĞ ÖZET */
+/* ORTA KUTU */
 
 .summary{
 background:white;
@@ -95,12 +111,10 @@ min-height:300px;
 margin-top:0;
 }
 
-.read{
-display:inline-block;
-margin-top:20px;
-border-bottom:1px solid black;
-text-decoration:none;
-color:black;
+/* SIRALAMA */
+
+.sort{
+margin-bottom:15px;
 }
 
 </style>
@@ -128,24 +142,22 @@ color:black;
 </div>
 </div>
 
-
 <div class="page">
 
-<div class="post-list">
+<div>
 
-<div class="post-item"
-onclick="showPost(
-'İlk tweet',
-'Kısa bir düşünce notu.',
-'/pdf/ilk-tweet.pdf'
-)">İlk tweet</div>
+<div class="sort">
 
-<div class="post-item"
-onclick="showPost(
-'İkinci tweet',
-'Başka bir kısa fikir.',
-'/pdf/ikinci-tweet.pdf'
-)">İkinci tweet</div>
+<select onchange="sortPosts(this.value)">
+
+<option value="date">Tarihe göre</option>
+<option value="alpha">Alfabetik</option>
+
+</select>
+
+</div>
+
+<div class="post-list" id="postList"></div>
 
 </div>
 
@@ -162,15 +174,77 @@ onclick="showPost(
 
 <script>
 
-function showPost(title, summary, link){
+let posts = [
 
-document.getElementById("summaryBox").innerHTML = `
-<h3>${title}</h3>
-<p>${summary}</p>
-<a class="read" href="${link}" target="_blank">Devamı (PDF)</a>
-`;
+{
+title:"Sistemler insanları üretir",
+date:"2026-03-10",
+text:"İnsan davranışının önemli kısmı sistemin ürünüdür."
+},
+
+{
+title:"Kurumlar zamanla körleşir",
+date:"2026-03-09",
+text:"Başarı uzun sürerse sistem geri bildirimleri kaybolur."
+},
+
+{
+title:"Stratejik planlar çoğu zaman dekoratif",
+date:"2026-03-08",
+text:"Çünkü gerçek kaldıraç noktalarına dokunmazlar."
+}
+
+];
+
+function renderPosts(){
+
+let list=document.getElementById("postList");
+
+list.innerHTML="";
+
+posts.forEach(p=>{
+
+let div=document.createElement("div");
+
+div.className="post-item";
+
+div.innerText=p.title;
+
+div.onclick=()=>showPost(p);
+
+list.appendChild(div);
+
+});
 
 }
+
+function showPost(post){
+
+document.getElementById("summaryBox").innerHTML=
+
+"<h3>"+post.title+"</h3><p>"+post.text+"</p>";
+
+}
+
+function sortPosts(type){
+
+if(type=="alpha"){
+
+posts.sort((a,b)=>a.title.localeCompare(b.title));
+
+}
+
+if(type=="date"){
+
+posts.sort((a,b)=>new Date(b.date)-new Date(a.date));
+
+}
+
+renderPosts();
+
+}
+
+renderPosts();
 
 </script>
 
