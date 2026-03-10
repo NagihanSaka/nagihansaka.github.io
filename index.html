@@ -1,5 +1,6 @@
 <head>
 
+<meta charset="UTF-8">
 <meta name="google-site-verification" content="pYisyO6z6NTlvNKQFOKIA5Fw5zEJMvWjEjGyKG3YL1I" />
 <meta name="description" content="Nagihan’ca yolculuklar; insanlı, insanımsı ve insansız sistemler üzerine notlar.">
 
@@ -86,18 +87,51 @@ transition:0.3s;
 width:100%;
 }
 
-/* ANA SAYFA GÖRSEL */
+/* ANA SAYFA GÖRSEL ALANI */
 
-.home-image{
+.home-hero{
+position:relative;
 text-align:center;
 margin-top:150px;
 margin-bottom:120px;
 }
 
-.home-image img{
+.home-hero img{
 width:80%;
 display:block;
 margin:auto;
+}
+
+.hero-text{
+position:absolute;
+top:18%;
+left:50%;
+transform:translateX(-50%);
+width:70%;
+text-align:center;
+color:#4a4747;
+}
+
+.hero-text h1{
+margin:0 0 18px 0;
+font-size:32px;
+font-style:italic;
+font-weight:600;
+line-height:1.2;
+}
+
+.hero-text p{
+margin:0;
+font-size:19px;
+font-style:italic;
+line-height:1.5;
+}
+
+.hero-divider{
+margin-top:18px;
+font-size:18px;
+letter-spacing:8px;
+color:#8b8b8b;
 }
 
 /* MOBİL */
@@ -112,6 +146,7 @@ text-align:center;
 
 .site-title{
 margin-bottom:10px;
+font-size:28px;
 }
 
 .menu{
@@ -124,8 +159,33 @@ gap:12px;
 font-size:15px;
 }
 
-.home-image img{
+.home-hero{
+margin-top:135px;
+margin-bottom:80px;
+}
+
+.home-hero img{
 width:95%;
+}
+
+.hero-text{
+top:13%;
+width:82%;
+}
+
+.hero-text h1{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+font-size:14px;
+}
+
+.hero-divider{
+margin-top:10px;
+font-size:14px;
+letter-spacing:5px;
 }
 
 }
@@ -155,9 +215,15 @@ width:95%;
 </div>
 </div>
 
-<div class="container home-image">
+<div class="container home-hero">
 
 <img src="/assets/anasayfa.png" alt="Nagihan ana sayfa">
+
+<div class="hero-text">
+<h1>Nagihan'ca yolculuklar</h1>
+<p>İnsanlı, insanımsı ve insansız sistemler üzerine notlar</p>
+<div class="hero-divider">◇ ◇ ◇</div>
+</div>
 
 </div>
 
