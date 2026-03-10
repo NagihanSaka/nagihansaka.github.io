@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: NagihanSaka/nagihansaka.github.io
+  branch: main
+
+media_folder: "pdf"
+public_folder: "/pdf"
+
+collections:
+
+  - name: "denemeler"
+    label: "Denemeler"
+    folder: "content/denemeler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Özet", name: "summary", widget: "text" }
+      - { label: "PDF", name: "pdf", widget: "file" }
+
+  - name: "tweetler"
+    label: "Tweetler"
+    folder: "content/tweetler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Özet", name: "summary", widget: "text" }
+      - { label: "PDF", name: "pdf", widget: "file" }
+
+  - name: "sistem"
+    label: "Sistem Dinamikleri"
+    folder: "content/sistem"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Özet", name: "summary", widget: "text" }
+      - { label: "PDF", name: "pdf", widget: "file" }
+
+  - name: "isletme"
+    label: "İşletme Sağlığı"
+    folder: "content/isletme"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Özet", name: "summary", widget: "text" }
+      - { label: "PDF", name: "pdf", widget: "file" }
+
+  - name: "finans"
+    label: "Finansal Sağlık"
+    folder: "content/finans"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Özet", name: "summary", widget: "text" }
+      - { label: "PDF", name: "pdf", widget: "file" }
