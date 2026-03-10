@@ -1,5 +1,0 @@
----
-title: İlk Yazım
----
-
-Bu Strateji bölümündeki ilk test yazısıdır.
